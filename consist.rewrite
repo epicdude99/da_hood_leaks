@@ -51,7 +51,7 @@ getgenv().consist = {
     FOV = {
         ["Visible"] = true,
         ["Radius"] = 40,
-        ["Transparency"] = 0.3
+        ["Transparency"] = 0.3,
         ["Default"] = 22,
         ["Color"] = "teal"
     },
