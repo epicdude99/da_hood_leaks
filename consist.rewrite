@@ -51,6 +51,7 @@ getgenv().consist = {
     FOV = {
         ["Visible"] = true,
         ["Radius"] = 40,
+        ["Transparency"] = 0.3
         ["Default"] = 22,
         ["Color"] = "teal"
     },
@@ -298,6 +299,7 @@ local UpdateFOV = function ()
     Circle.Visible = consist.FOV["Visible"]
     Circle.Radius = consist.FOV["Radius"] * 3
     Circle.Position = Vector2.new(Mouse.X, Mouse.Y + (game:GetService("GuiService"):GetGuiInset().Y))
+    Circle.Transparency = consist.FOV["Transparency"]
     Circle.Color = Circle.Color
     return Circle
 end
