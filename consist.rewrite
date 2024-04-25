@@ -203,11 +203,11 @@ getgenv().consist = {
         ["Maximum"] = 180
     },
     Esp = {
-        ["Enabled"] = false, -- Loads the ESP
+        ["Enabled"] = true, -- Loads the ESP
         ["Bounding_Box"] = true, -- Box Base
         ["Fill_Box"] = false, -- If you want to fill the box
         ["Fill_Transparency"] = 0.75, -- Box transparency
-        ["Show_Distance"] = false, -- Shows the players distance
+        ["Show_Distance"] = true, -- Shows the players distance
         ["Show_Name"] = true, -- Shows the players name
         ["Show_Health"] = true, -- Shows the players health
         ["Health_Type"] = "Bar" -- Text, Both 
