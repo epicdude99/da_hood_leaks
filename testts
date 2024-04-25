@@ -18,7 +18,7 @@ getgenv().StandConfig = {
     ['CrewID'] = 32570691, --Must Be In Group For It To Work
     ['Attack'] = 'Heavy', --Heavy = Super Punch Light = Spam Punch [Heavy | Light]
     ['StandMode'] = 'TheWorld', --[Star Platinum : OverHeaven | Star Platinum: The World | Star Platinum, Za Warudo! | TheWorld | Cmoon | King Crimson | Killer Queen | MIH | D4C]
-    ['FlyMode'] = 'Glide', --[Glide | FlyV1 | FlyV2 | Hover | Heaven ]
+    ['FlyMode'] = 'Heaven', --[Glide | FlyV1 | FlyV2 | Hover | Heaven ]
     ['Pred'] = 0.34, --Prediction For Attack Or Targetting
     ['AutoPred'] = 0.23, --Prediction For Attack Or Targetting
     ['GunPred'] = 0.037, --Gun prediction [this is auto prediction sets]
@@ -30,15 +30,15 @@ getgenv().StandConfig = {
     --\\-- ! Antilock ! --//--
     ['SkyAmount'] = 1600, --Sky Velocity
     --\\-- ! Misc ! --//--
-    ['AutoSaveLocation'] = '1', --[1 | 2]. '1' is bank food shop rooftop, '2' is "DA FURNITURE" Rooftop
+    ['AutoSaveLocation'] = '2', --[1 | 2]. '1' is bank food shop rooftop, '2' is "DA FURNITURE" Rooftop
     ['AttackDistance'] = 75, --Attack distance for "Attack!, Stab!, Gkill!" max distance
     ['Smoothing'] = false, --[true | false] If [false] Less Delays And if [true] The Stand Movement Will Smooth But Kinda Delayed
     ['CustomPrefix'] = '.', --[ ! | / | . | ? | > | < | | ; | : ] Custom target prefix
-    ['CustomSummon'] = 'Summon!', --Custom [Summon!] Text
+    ['CustomSummon'] = 'with this treasure i summon..', --Custom [Summon!] Text
     ['SummonPoses'] = 'Pose1', --[false | Pose1 | Pose2 | Pose3]
     ['LowGraphics'] = false, --[true | false] Turns graphics down so your stand doesnt lag too much
     ['AntiStomp'] = true, --[true | false] The Stand Will Cannot Be Stomped Or Grabbed
-    ['CustomName'] = 'Master', --Custom Name Text Default Is [Master] Example Of it 'Im Here, Master'
+    ['CustomName'] = 'samet', --Custom Name Text Default Is [Master] Example Of it 'Im Here, Master'
     ['Hidescreen'] = false, --[true | false] If [true] You WIll See White Blank Screen But The Performance Is Gonna Be Good]
     ['ChatCmds'] = true, --[true | false] Chatted When You Use Some Command
     ['MaskMode'] = 'Paintball', --[Surgeon | Paintball | Skull | Pumpkin | Hockey | Ninja | Riot] The Stand Will Buy The Mask You Selected
