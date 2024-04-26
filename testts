@@ -16,7 +16,7 @@ getgenv().Accounts = {OWNER = 'uyaaz12', STAND = "reusableicecubes1"}
 getgenv().StandConfig = {
     --\\-- ! Main ! --//--
     ['Position'] = 'Right', --Position Of Stand [Back | Left | Right]
-    ['CrewID'] = 32570691, --Must Be In Group For It To Work
+    ['CrewID'] = 12836673, --Must Be In Group For It To Work
     ['Attack'] = 'Heavy', --Heavy = Super Punch Light = Spam Punch [Heavy | Light]
     ['StandMode'] = 'Cmoon', --[Star Platinum : OverHeaven | Star Platinum: The World | Star Platinum, Za Warudo! | TheWorld | Cmoon | King Crimson | Killer Queen | MIH | D4C]
     ['FlyMode'] = 'Heaven', --[Glide | FlyV1 | FlyV2 | Hover | Heaven ]
