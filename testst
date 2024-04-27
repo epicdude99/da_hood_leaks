@@ -1,0 +1,143 @@
+--\\-- Accounts --//--
+
+getgenv().Accounts = {OWNER = 'YourOwnerUsername', STAND = "YourStandUsername"}
+
+--\\-- Stand-Configuration --//--
+
+getgenv().StandConfig = {
+    --\\-- ! Main ! --//--
+    ['Position'] = 'Back', --Position Of Stand [Back | Left | Right]
+    ['CrewID'] = 32570691, --Must Be In Group For It To Work
+    ['Attack'] = 'Heavy', --Heavy = Super Punch Light = Spam Punch [Heavy | Light]
+    ['StandMode'] = 'TheWorld', --[Star Platinum : OverHeaven | Star Platinum: The World | Star Platinum, Za Warudo! | TheWorld | Cmoon | King Crimson | Killer Queen | MIH | D4C]
+    ['FlyMode'] = 'Glide', --[Glide | FlyV1 | FlyV2 | Hover | Heaven ]
+    ['Pred'] = 0.34, --Prediction For Attack Or Targetting
+    ['AutoPred'] = 0.23, --Prediction For Attack Or Targetting
+    ['GunPred'] = 0.037, --Gun prediction [this is auto prediction sets]
+    ['AutoPredic'] = false, --[true | false] Turn On Or Off Auto Prediction 
+    ['AttackMode'] = 'Sky', --[Sky | Under] If [Sky] The Stand Will Attack Infront Of Target And If [Under] The Stand Will Attack In Underground
+    ['GunMode'] = 'Under', --[Sky | Under]  The Stand Will Shooting Just Like What In The Settings
+    ['GunType'] = 'Lmg', --[Lmg | Aug]  The Stand Will Shooting Just Like What In The Settings
+    ['Resolver'] = false, --[true | false] Turn On Or Off Resolver If Someone Using Anti Lock
+    --\\-- ! Antilock ! --//--
+    ['SkyAmount'] = 1600, --Sky Velocity
+    --\\-- ! Misc ! --//--
+    ['AutoSaveLocation'] = '1', --[1 | 2]. '1' is bank food shop rooftop, '2' is "DA FURNITURE" Rooftop
+    ['AttackDistance'] = 75, --Attack distance for "Attack!, Stab!, Gkill!" max distance
+    ['Smoothing'] = false, --[true | false] If [false] Less Delays And if [true] The Stand Movement Will Smooth But Kinda Delayed
+    ['CustomPrefix'] = '.', --[ ! | / | . | ? | > | < | $ | ; | : ] Custom target prefix
+    ['CustomSummon'] = 'Summon!', --Custom [Summon!] Text
+    ['SummonPoses'] = 'Pose1', --[false | Pose1 | Pose2 | Pose3]
+    ['LowGraphics'] = false, --[true | false] Turns graphics down so your stand doesnt lag too much
+    ['AntiStomp'] = true, --[true | false] The Stand Will Cannot Be Stomped Or Grabbed
+    ['CustomNAME'] = 'Master', --Custom Name Text Default Is [Master] Example Of it 'Im Here, Master'
+    ['Hidescreen'] = false, --[true | false] If [true] You WIll See White Blank Screen But The Performance Is Gonna Be Good]
+    ['ChatCmds'] = true, --[true | false] Chatted When You Use Some Command
+    ['MaskMode'] = 'Breathing', --[Surgeon | Paintball | Skull | Pumpkin | Hockey | Ninja | Riot | Breathing] The Stand Will Buy The Mask You Selected
+    ['AutoMask'] = true, --[true | false] Auto Buy Mask When The St    and Respawn
+    ['FPSCAP'] = false, --[false | 'NUMBER'] This is so your main account gets the most fps (MAXED IS 60, SUGGEST 30 FPS ON STANDS)
+    ['Msg'] = 'Yare Yare Daze.', --When You Say [/e msg] It Makes All The Alts Say That Message
+    ['Alt'] = false, --keep this false
+    --//    ! Sounds !     \\--
+    --\\ MUST HAVE BOOMBOX //--
+    ['Sounds'] = true, --[true | false]
+    ['CustomSong'] = 6703926669, --Enter A Song ID And Say 'Song!'
+    ['SummonMusic'] = true, --[true | false]
+    ['SummonMusicID'] = 'Default' -- Enter a Sound ID Put [Default] If You Would Like The Default Sound
+}
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Stand Script | by XK5NG | gui version by chromosome collector", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Stand Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Execute"
+})
+
+Tab:AddButton({
+	Name = "Load stand script",
+	Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Notice!",
+            Content = "This will load the current settings of the stand.",
+            Image = "rbxassetid://4483345998",
+            Time = 5
+        })        
+        loadstring(game:HttpGet("https://xk5ng.github.io/V4.5"))()
+  	end    
+})
+
+Tab:AddTextbox({
+	Name = "Owner name",
+	Default = "...",
+	TextDisappear = true,
+	Callback = function(Value)
+		getgenv().Accounts.OWNER = Value 
+	end	  
+})
+
+Tab:AddTextbox({
+	Name = "Stand name",
+	Default = "...",
+	TextDisappear = true,
+	Callback = function(Value)
+		getgenv().Accounts.STAND = Value 
+	end	  
+})
+
+Tab:AddTextbox({
+	Name = "Crew ID",
+	Default = "...",
+	TextDisappear = true,
+	Callback = function(Value)
+		getgenv().StandConfig.CrewID = Value 
+	end	  
+})
+
+Tab:AddDropdown({
+	Name = "Position",
+	Default = "Back",
+	Options = {"Back", "Left","Right",},
+	Callback = function(Value)
+		getgenv().StandConfig.Position = Value
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Low GFX",
+	Default = false,
+	Callback = function(Value)
+		getgenv().StandConfig.LowGraphics
+	end    
+})
+
+
+local Section2 =  Tab:AddSection({
+    Name = "Stand settings"
+})
+
+Tab:AddDropdown({
+	Name = "Stand mode",
+	Default = "TheWorld",
+	Options = {"Cmoon", "King Crimson","Killer Queen","MIH","D4C","TheWorld"},
+	Callback = function(Value)
+		getgenv().StandConfig.StandMode = Value
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "Fly mode",
+	Default = "Glide",
+	Options = {"Glide","Heaven","Hover","FlyV1","FlyV2"},
+	Callback = function(Value)
+		getgenv().StandConfig.FlyMode = Value
+	end    
+})
+
+
